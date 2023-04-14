@@ -1,0 +1,186 @@
+body{
+    background-image: url("../images/fundo.png");   
+    display: flex;
+    background-position: center;
+    
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+}
+
+.flores{
+    background-image: url("../images/flores.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    min-width: 397px;
+    min-height: 220px;
+    max-width: 547px;
+    max-height: 382px;
+    width: 50%;
+    height: 35vw;
+    top: -20px;
+    right: -20px;
+    transform: rotate(180deg);
+}
+audio{
+    height: 10px;
+    
+    
+}
+.nomeNoivos{
+    width: 100%;
+    text-align: center;
+}
+.nomeNoivos img{
+    width: 90%;
+    max-width: 477px;
+}
+
+.imgdescricao{
+    width: 90%;
+    max-width: 545px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section h2{
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: 400;
+    max-width: 554px;
+}
+
+.flormeio{
+    background-image: url("../images/flormeio.png");
+    background-repeat: no-repeat;
+    width: 30%;
+    background-position: center;
+    background-size: contain    ;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.gpsContainer{
+    display: flex;
+    margin-top: 15px;
+    gap: 32px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.gpsCard{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.gpsCard h3{
+    font-size: 22px;
+    font-weight: 400;
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    
+}
+.gpsCard img{
+    width: 30px;
+    align-self: center;
+    transition: 1s;
+    cursor: pointer;
+}
+.gpsCard img:hover{
+    transform: translateY(-10px);
+}
+
+.gpsCard a{
+    background-color: rgba(202, 63, 63, 0.774);
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    color: #cec3c3;
+    
+}
+
+.gpsCard a:hover{
+background-color: rgba(202, 63, 63);
+}
+.gpsCard span{
+    align-self: center;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+    font-size: 18px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    font-family: 'EB Garamond', serif;
+    
+}
+
+footer h3{
+    width: 70%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.lista{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 532px;
+    z-index: 1;
+}
+
+.lista a{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-family: 'EB Garamond', serif;
+}
+
+.lista img{
+    width: 60%;
+    background-color: rgb(238, 227, 212);
+    border-radius:50% ;
+    padding: 10px;
+}
+
+.flor2{
+    background-image: url("../images/flores.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    min-width: 397px;
+    min-height: 220px;
+    max-width: 547px;
+    max-height: 382px;
+    width: 50%;
+    height: 35vw;
+    bottom: 0;
+    left:-20px;
+}
