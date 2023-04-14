@@ -7,7 +7,7 @@ body{
     align-items: center;
     width: 100%;
     position: relative;
-    height: 850px;
+    height: 800px;
     overflow: hidden;
     justify-content: center;
 }
@@ -38,7 +38,7 @@ header{
     transform: rotate(180deg);
 }
 audio{
-    height: 15px;
+    height: 20px;
     width: 100%;
     background-color: transparent;
     opacity: .8;
@@ -187,7 +187,7 @@ footer h3{
     max-height: 382px;
     width: 50%;
     height: 35vw;
-    bottom: -50px;
+    bottom: -5px;
     left:-20px;
     z-index: -1;
 }
