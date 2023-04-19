@@ -1,64 +1,129 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casamento Eduardo & Marcia</title>
-    <link rel="stylesheet" href="./styles/body.css"/>
-    <link rel="stylesheet" href="./styles/reset.css"/>
+    <link rel="stylesheet" href="./styles/body.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/a062562745.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
-        <audio controls autoplay >
-            <source src="./music/bruna-karla-desde-o-primeiro-sim-clipe-oficia.mp3" type="audio/mpeg"/>
+
+        <audio id="myAudio" ontimeupdate="onTimeUpdate()">
+            <!-- <source src="audio.ogg" type="audio/ogg"> -->
+            <source id="source-audio" src="" type="audio/mpeg">
+            Your browser does not support the audio element.
         </audio>
+
+        <div class="player-ctn">
+            <div class="infos-ctn">
+                <div class="timer">00:00</div>
+                <div class="title"></div>
+                <div class="duration">00:00</div>
+            </div>
+            <div id="myProgress">
+                <div id="myBar"></div>
+            </div>
+            <div class="btn-ctn">
+                <div class="btn-action first-btn" onclick="previous()">
+                    <div id="btn-faws-back">
+                        <i class='fas fa-step-backward'></i>
+                    </div>
+                </div>
+                <div class="btn-action" onclick="rewind()">
+                    <div id="btn-faws-rewind">
+                        <i class='fas fa-backward'></i>
+                    </div>
+                </div>
+                <div class="btn-action" onclick="toggleAudio()">
+                    <div id="btn-faws-play-pause">
+                        <i class='fas fa-play' id="icon-play"></i>
+                        <i class='fas fa-pause' id="icon-pause" style="display: none"></i>
+                    </div>
+                </div>
+                <div class="btn-play" onclick="forward()">
+                    <div id="btn-faws-forward">
+                        <i class='fas fa-forward'></i>
+                    </div>
+                </div>
+                <div class="btn-action" onclick="next()">
+                    <div id="btn-faws-next">
+                        <i class='fas fa-step-forward'></i>
+                    </div>
+                </div>
+                <div class="btn-mute" id="toggleMute" onclick="toggleMute()">
+                    <div id="btn-faws-volume">
+                        <i id="icon-vol-up" class='fas fa-volume-up'></i>
+                        <i id="icon-vol-mute" class='fas fa-volume-mute' style="display: none"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="playlist-ctn"></div>
+        </div>
+
+
+
+
         <div class="flores">
 
         </div>
+
         <div class="nomeNoivos">
-            <img src="./images/nome.png" alt="Nome dos noivos"/>
+            <img src="./images/nome.png" alt="Nome dos noivos" />
         </div>
+
     </header>
     <section>
-        <img class="imgdescricao" src="./images/descricao.png" alt="nome dos noivos mais descrição"/>
-        <h2>Esqueçam o que se foi; não vivam no passado. Vejam, estou fazendo uma coisa nova! Ela já está surgindo"  !
-            Isaías 43: 18-19</h2>
+        <img class="imgdescricao" src="./images/descricao.png" alt="nome dos noivos mais descrição" />
+
         <h2>A realizar-se no dia 8 de Junho de 2023, às 9h da manhã,
             na Igreja CEFAVI localizada na Av. Fernando Ferrari Lt57 Qd57</h2>
+        <h2>Esqueçam o que se foi; não vivam no passado. Vejam, estou fazendo uma coisa nova! Ela já está surgindo" !
+            Isaías 43: 18-19</h2>
         <div class="flormeio"></div>
         <div class="flor2"></div>
         <div class="gpsContainer">
-            <div >
+            <div>
                 <a target="_blanck" class="gpsCard" href="https://goo.gl/maps/ietXu32SGdw7XE9t7">
-                <h3>Cerimônia</h3>
-                <img src="./images/gpsIcon.png" alt="gps icon"/>
-                <span>Localização</span>
-            </a>
+                    <h3>Cerimônia</h3>
+                    <img src="./images/gpsIcon.png" alt="gps icon" />
+                    <span>Localização</span>
+                </a>
             </div>
             <div class="gpsCard">
                 <a href="https://forms.gle/b33JnpB3iWv5zw8UA" target="_blank">Confirmar presença</a>
             </div>
             <div>
                 <a target="_blanck" class="gpsCard" href="https://goo.gl/maps/nWXBgueLLsgwiKMr6">
-                <h3>Recepção</h3>
-                <img src="./images/gpsIcon.png" alt="gps icon"/>
-                <span>Localização</span>
-            </a>
+                    <h3>Recepção</h3>
+                    <img src="./images/gpsIcon.png" alt="gps icon" />
+                    <span>Localização</span>
+                </a>
             </div>
         </div>
     </section>
     <footer>
         <h3>Caso queira nos presentear escolha umas das opções abaixo da nossa lista de presentes.</h3>
         <div class="lista">
-            <a href="https://listas.casasbahia.com.br/marciaeeduardo" target="_blank">Lista de presentes 1 <img src="./images/presente.png" alt="icon presente"/></a>
-            <a target="_blanck" href="https://www.querodecasamento.com.br/lista-de-casamento/marcia-da-silva-nunes--eduardo-araujo">Lista de presentes 2 <img src="./images/presente.png" alt="icon presente"/></a>
+            <a href="https://listas.casasbahia.com.br/marciaeeduardo" target="_blank">Lista de presentes 1 <img
+                    src="./images/presente.png" alt="icon presente" /></a>
+            <a target="_blanck"
+                href="https://www.querodecasamento.com.br/lista-de-casamento/marcia-da-silva-nunes--eduardo-araujo">Lista
+                de presentes 2 <img src="./images/presente.png" alt="icon presente" /></a>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>
